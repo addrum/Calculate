@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 	private float result;
 	private boolean resultDisplayed = false;
 	private DecimalFormat decimalFormat = new DecimalFormat("#.#########");
-
+// random comment to test
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
