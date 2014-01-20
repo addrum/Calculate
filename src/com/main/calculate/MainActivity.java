@@ -29,7 +29,8 @@ public class MainActivity extends Activity {
 	private float result;
 	private boolean resultDisplayed = false;
 	private DecimalFormat decimalFormat = new DecimalFormat("#.#########");
-// random comment to test
+
+	// random comment to test
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -218,9 +219,7 @@ public class MainActivity extends Activity {
 					if (Character.isDigit(textField.getText().charAt(textField.length() - 1))) {
 						calculate();
 					} else {
-						if (!Character.isDigit(textField.getText().charAt(textField.length() - 1))) {
-							textField.getText().delete(textField.getText().length() - 1, textField.getText().length());
-						}
+						textField.getText().delete(textField.getText().length() - 1, textField.getText().length());
 					}
 				}
 				addToOutput("+");
@@ -261,11 +260,9 @@ public class MainActivity extends Activity {
 			if (textField.getText().charAt(i) == '+') {
 				result = Float.parseFloat(textField.getText().toString().substring(0, i)) + Float.parseFloat(textField.getText().toString().substring(i + 1, textField.length()));
 				returnAnswer(decimalFormat.format(result));
-			} else if (textField.getText().charAt(i) == '-') {
-				if (textField.getText().charAt(0) != '-') {
-					result = Float.parseFloat(textField.getText().toString().substring(0, i)) - Float.parseFloat(textField.getText().toString().substring(i + 1, textField.length()));
-					returnAnswer(decimalFormat.format(result));
-				}
+			} else if (textField.getText().charAt(i) == '-' && i != 0) {
+				result = Float.parseFloat(textField.getText().toString().substring(0, i)) - Float.parseFloat(textField.getText().toString().substring(i + 1, textField.length()));
+				returnAnswer(decimalFormat.format(result));
 			} else if (textField.getText().charAt(i) == '*') {
 				result = Float.parseFloat(textField.getText().toString().substring(0, i)) * Float.parseFloat(textField.getText().toString().substring(i + 1, textField.length()));
 				returnAnswer(decimalFormat.format(result));
