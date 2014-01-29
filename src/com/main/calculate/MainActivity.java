@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
 		// set layout file for this activity
 		setContentView(R.layout.main);
 		thread.start();
+		
 		// get id's
 		plusButton = (Button) findViewById(R.id.plusButton);
 		minusButton = (Button) findViewById(R.id.minusButton);
@@ -60,6 +61,8 @@ public class MainActivity extends Activity {
 		button8 = (Button) findViewById(R.id.button8);
 		button9 = (Button) findViewById(R.id.button9);
 		textField = (EditText) findViewById(R.id.textField);
+		
+		// set input type of the field to disable user input and allow it to show a context menu
 		textField.setInputType(InputType.TYPE_NULL);
 		registerForContextMenu(textField);
 
