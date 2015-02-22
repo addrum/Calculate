@@ -1,6 +1,6 @@
 Android Calculator:
 
-Computes +, -, *, �
+Simple Java calculator. It was written using Java and currently can compute, addition, subtraction, multiplication, division and modulo.
 
 <a href="https://play.google.com/store/apps/details?id=com.main.calculate">
   <img alt="Get it on Google Play"
